@@ -1,13 +1,26 @@
 body{
-    background-image: url("./images/bg-pattern-bottom-desktop.svg");
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-bottom: 50px;
 }
+.bg-images img{
+    position: absolute;
+}
+#bg-pattern-bottom-desktop, #bg-pattern-bottom-mobile{
+    bottom: 0;
+    right: 0;
+}
+#bg-pattern-top-desktop, #bg-pattern-top-mobile {
+    top: 0;
+}
+#bg-pattern-bottom-mobile, #bg-pattern-top-mobile {
+    display: none;
+}
+
 .top-section{
     display: flex;
     flex-direction: row;
     width: 80vw;
-    margin-left: 10vw;
+    margin: 0 auto;
     justify-content: space-between;
 }
 
@@ -25,7 +38,7 @@ header{
 .head-sub-text{
     width: 78%;
     line-height: 2;
-    color: #512850;
+    color: #ABA4AB;
     margin-top: -50px;
 }
 
@@ -59,6 +72,7 @@ aside{
     justify-content: space-between;
     padding: 5px 6%;
     border-radius: 8px;
+    z-index: 1;
     /* transform: scale(1.06); */
 }
 .aside-tab-text{
@@ -68,7 +82,15 @@ aside{
     font-weight: bold;
     font-size: 13px;
 }
+.aside-tab-text p{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.aside-tab-text:hover > p{
+    overflow: visible;
 
+}
 .cards-container{
     width: 80vw;
     margin-left: 10vw;
@@ -80,11 +102,15 @@ aside{
     border-radius: 8px;
     width: 27.5%;
     padding: 2%;
-    height: 200px;
+    height: 230px;
 }
 .image{
     transform: scale(0.5);
     border-radius: 50%;
+    margin-top: -6px;
+}
+.card-title-container{
+    font-size: 0.9rem;
 }
 .card-title{
     color: white;
@@ -93,6 +119,7 @@ aside{
 .verified-buyer {
     color: #b645a0;
     margin-top: -12px;
+    margin-bottom: 0;
 }
 .card-heading{
     display: flex;
@@ -101,6 +128,7 @@ aside{
     color: rgba(255,255,255,0.7);
     line-height: 1.5;
     font-size: 15px;
+    padding: 0 18px 18px;
 }
 .card-2{
     margin-top: 15px;
@@ -145,7 +173,12 @@ aside{
         align-items: center;
     }
     .card{
-        width: 60%;
+        width: 80%;
+       margin-right: 6.5%;
+        margin-bottom: 10px;
+    }
+    .card-text{
+        padding-bottom: 0;
     }
 }
 
@@ -162,5 +195,11 @@ aside{
     }
     .card{
         width: 80%;
+    }
+    #bg-pattern-bottom-mobile, #bg-pattern-top-mobile {
+        display: block;
+    }
+    #bg-pattern-bottom-desktop, #bg-pattern-top-desktop {
+        display: none;
     }
 }
